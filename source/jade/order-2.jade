@@ -1,0 +1,69 @@
+extends _layout
+
+block append content
+	header.header.headerinside
+		.wrap
+			+header-nav
+	//- header
+
+	.order
+		.order__steps
+			.order__steps-in.is-step-2
+				.step
+					a(href="order-1.html")
+						.pos Step 1
+						.name Price Calculation
+				.step.is-acrive
+					.pos Step 2
+					.name Order Details
+				.step
+					a(href="order-3.html")
+						.pos Step 3
+						.name Make Payment
+		.order__content
+			.wrap
+				.order__content-in
+					.orderline
+						.orderline__name.has-align-top How we can help you
+						.orderline__content
+							textarea(placeholder="Write here...").full
+					.orderline
+						.orderline__name Referencing Style
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Essential Sources
+						.orderline__content
+							input(type="text", placeholder="Please type").full
+					.orderline
+						.orderline__name Suggested Sources
+						.orderline__content
+							input(type="text", placeholder="Please type").full
+					.orderline.has-padding-top
+						.orderline__name Extra information
+						.orderline__content
+							a(href="#").attachfile-yes File_name.pdf 
+							.attachfile-loading
+								.attachfile-loading-in 56%
+							a(href="#").btn-trans.btn-big.full add files
+					.orderline.has-padding-top
+						.orderline__name
+						.orderline__content
+							input(type="checkbox" id="checkbox1").js-styler
+							label(for="checkbox1")
+							a(href="#").terms-link Terms and Conditions
+
+				.order__price
+					.js-orderprice-fixed
+						.order__price-bg-line
+						.order__price-in
+							.order__price__name Your price
+							.order__price__value £600
+						.order__price-bg
+						.order__price__act
+							a(href="order-3.html").btn-gold.w100 Next step

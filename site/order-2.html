@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Trusted Academics</title>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Styles-->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
+    <script src="js/jquery.remodal.min.js" type="text/javascript"></script>
+    <script src="js/jquery.sticky-kit.min.js" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+    <script src="js/jquery.formstyler.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+  </head>
+  <body class="page-body">
+    <div class="ilkome">
+      <div class="hide">
+        <div data-remodal-id="review-write" class="popup remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <h2 class="popup__name">Post review</h2>
+          <form action="#review-ok">
+            <div>
+              <input type="text" placeholder="Name" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="E-mail" class="text-inp"/>
+            </div>
+            <div>
+              <textarea placeholder="Message" class="text-area"></textarea>
+            </div>
+            <div class="popup__act">
+              <input type="submit" value="Send review" class="btn-submit"/>
+            </div>
+          </form>
+        </div>
+        <div data-remodal-id="review-ok" class="popupsm remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <p>Thank you! Your review will be posted within 24 hours.</p><a href="#" class="btn-ok">Ok</a>
+        </div>
+        <div data-remodal-id="free-consul" class="popup remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <h2 class="popup__name"> <span class="bg-freecon">Get free consultation</span></h2>
+          <form action="#free-consul-ok">
+            <div>
+              <input type="text" placeholder="Name" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="Number" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="E-mail" class="text-inp"/>
+            </div>
+            <div class="popup__act">
+              <input type="submit" value="Send" class="btn-submit"/>
+            </div>
+          </form>
+        </div>
+        <div data-remodal-id="free-consul-ok" class="popupsm remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <p>Our academic consultant will contact you directly. Thank you!</p><a href="#" class="btn-ok">Ok</a>
+        </div>
+      </div>
+      <header class="header headerinside">
+        <div class="wrap">
+          <nav class="headmenu js-headmenu">
+            <div class="wrap">
+              <div class="headlogo"><a href="index.html"></a></div>
+              <ul class="menu-left">
+                <li class="about"><a href="about.html">About us</a></li>
+                <li class="servies is-active"><a href="services.html">Services</a></li>
+                <li><a href="guarantees.html">Guarantees</a></li>
+              </ul>
+              <ul class="menu-right">
+                <li><a href="prices.html">Prices</a></li>
+                <li class="contact"><a href="contacts.html">Contact us</a></li>
+                <li class="is-mark"><a href="order-1.html">Order now</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="order">
+        <div class="order__steps">
+          <div class="order__steps-in is-step-2">
+            <div class="step"><a href="order-1.html">
+                <div class="pos">Step 1</div>
+                <div class="name">Price Calculation</div></a></div>
+            <div class="step is-acrive">
+              <div class="pos">Step 2</div>
+              <div class="name">Order Details</div>
+            </div>
+            <div class="step"><a href="order-3.html">
+                <div class="pos">Step 3</div>
+                <div class="name">Make Payment</div></a></div>
+          </div>
+        </div>
+        <div class="order__content">
+          <div class="wrap">
+            <div class="order__content-in">
+              <div class="orderline">
+                <div class="orderline__name has-align-top">How we can help you</div>
+                <div class="orderline__content">
+                  <textarea placeholder="Write here..." class="full"></textarea>
+                </div>
+              </div>
+              <div class="orderline">
+                <div class="orderline__name">Referencing Style</div>
+                <div class="orderline__content">
+                  <select data-placeholder="Please select" class="full">
+                    <option></option>
+                    <option value="">Option one</option>
+                    <option value="">Option two</option>
+                    <option value="">Option three</option>
+                    <option value="">Option 4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="orderline">
+                <div class="orderline__name">Essential Sources</div>
+                <div class="orderline__content">
+                  <input type="text" placeholder="Please type" class="full">
+                </div>
+              </div>
+              <div class="orderline">
+                <div class="orderline__name">Suggested Sources</div>
+                <div class="orderline__content">
+                  <input type="text" placeholder="Please type" class="full">
+                </div>
+              </div>
+              <div class="orderline has-padding-top">
+                <div class="orderline__name">Extra information</div>
+                <div class="orderline__content"><a href="#" class="attachfile-yes">File_name.pdf </a>
+                  <div class="attachfile-loading">
+                    <div class="attachfile-loading-in">56%</div>
+                  </div><a href="#" class="btn-trans btn-big full">add files</a>
+                </div>
+              </div>
+              <div class="orderline has-padding-top">
+                <div class="orderline__name"></div>
+                <div class="orderline__content">
+                  <input type="checkbox" id="checkbox1" class="js-styler">
+                  <label for="checkbox1"></label><a href="#" class="terms-link">Terms and Conditions</a>
+                </div>
+              </div>
+            </div>
+            <div class="order__price">
+              <div class="js-orderprice-fixed">
+                <div class="order__price-bg-line"></div>
+                <div class="order__price-in">
+                  <div class="order__price__name">Your price</div>
+                  <div class="order__price__value">£600</div>
+                </div>
+                <div class="order__price-bg"></div>
+                <div class="order__price__act"><a href="order-3.html" class="btn-gold w100">Next step</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer__contacts">
+            <div class="phone">+44 1865 59 80 60</div>
+            <div class="email"><a href="#">careteam@trustedacademics.co.uk</a></div>
+          </div>
+          <div class="footer__social">
+            <ul>
+              <li class="fb"><a href="#"></a></li>
+              <li class="inst"><a href="#"></a></li>
+              <li class="tw"><a href="#"></a></li>
+              <li class="in"><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="footer__copy">2015. Trusted Academics. All rights reserved.</div>
+          <div class="footer__logo"><a href="#"></a></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

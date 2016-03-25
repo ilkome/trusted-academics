@@ -1,0 +1,34 @@
+extends _layout
+
+block append content
+	header.header.headerabout
+		.wrap
+			+header-nav
+			.headtext
+				p We write essays and we are seriously good at it. We are an academic consulting company helping our clients get the top grades. Our head office is in Oxford and our academics come primarily from Russell Group universities across the UK.
+				p Having written over 290,000 words for our clients in the last year alone, we are have the knowledge and experience you can trust. And crucially, we know how to deliver results that suit the requirements and your lecturer.
+				p All of us here at Trusted Academics love to meet our clients. Pop into our Oxford office to have lunch, a game of Ping-pong or a non-alcoholic drink.
+				p Alternatively, we are always available and super quick to reply. <br>Reach out to us via telephone, Facebook, e-mail, or an owl mailing service. <br></p>
+	//- header
+	
+
+	.team
+		.wrap
+			h2.team__name Meet our team
+			mixin team-item(photo, name, desc, text)
+				.team-item
+					.team-item-in
+						h3.team-item__name= name
+						.team-item__desc= desc
+						.team-item__pic: img(src="img/user-ava-#{photo}.png", alt="Team member photo")
+						.team-item__text= text
+					.team-item__bd
+			.team__content
+				+team-item("1", "Jeremy O’Donnell", "Customer Service Manager", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.")
+				+team-item("2", "Cyril Kachmazov", "CEO", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.")
+				+team-item("3", "Giuseppe Ni", "Customer Service Manager", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.")
+				+team-item("4", "Giuseppe Ni", "SMO", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.")
+	//- team
+
+
+	+oneproject("is-grey")

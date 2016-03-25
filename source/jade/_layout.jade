@@ -1,0 +1,14 @@
+include _mixin
+//-block vars
+
+doctype html
+html(lang="ru")
+	include _head
+
+	body.page-body
+		.ilkome
+			+popups
+			
+			block content
+
+			+footer

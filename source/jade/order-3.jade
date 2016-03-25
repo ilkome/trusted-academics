@@ -1,0 +1,74 @@
+extends _layout
+
+block append content
+	header.header.headerinside
+		.wrap
+			+header-nav
+	//- header
+
+	.order
+		.order__steps.has-float-left
+			.order__steps-in.is-step-3
+				.step
+					a(href="order-1.html")
+						.pos Step 1
+						.name Price Calculation
+				.step
+					a(href="order-2.html")
+						.pos Step 2
+						.name Order Details
+				.step.is-acrive
+					.pos Step 3
+					.name Make Payment
+		.order__content
+			.wrap
+				.order__content-in
+					.orderline
+						.orderline__name Payment method
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="Credit" selected) Credit card
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Type of card
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Name on card
+						.orderline__content
+							input(type="text", placeholder="Please type").full
+					.orderline
+						.orderline__name Card number
+						.orderline__content
+							input(type="text", placeholder="Please type").full
+					.orderline
+						.orderline__name Start date
+						.orderline__content
+							input(type="text", placeholder="Please type").half
+					.orderline
+						.orderline__name Expiry date
+						.orderline__content
+							input(type="text", placeholder="Please type").half
+					.orderline
+						.orderline__name CVV number
+						.orderline__content
+							input(type="text", placeholder="Please type").half
+					
+
+				.order__price
+					.js-orderprice-fixed
+						.order__price-bg-line
+						.order__price-in
+							.order__price__name Your price
+							.order__price__value £600
+						.order__price-bg
+						.order__price__act
+							a(href="index.html").btn-gold.w100 Finish

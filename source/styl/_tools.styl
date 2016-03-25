@@ -1,0 +1,201 @@
+
+// ===============================================
+/* 
+	Ilya Komichev
+	ilko.me
+
+	Stylus tools
+	v2.2.3
+*/
+// ===============================================
+
+
+
+*, *:before, *:after
+	box-sizing border-box
+
+@-ms-viewport
+	width device-width
+
+clearfix()
+	&:before
+	&:after
+		content ""
+		display table
+		clear both
+
+.clear
+	clearfix()
+
+
+
+// ===============================================
+//	#cols
+// ===============================================
+wrap()
+	font-size 0
+	display block
+	> *
+		position relative
+		width 100%
+		min-height 1px
+		font-size 1rem
+		vertical-align top
+		display inline-block
+
+col(row = false, col = false)
+	if (row == auto)
+		width auto
+	else if (row == hidden)
+		display none
+	else
+		width (100% / row * col)
+		
+gutter(gutter = false, out = false)
+	if gutter
+		margin 0 (- gutter) 0 (- gutter)
+		> *
+			padding 0 gutter
+	if out
+		margin 0
+
+.row
+	wrap()
+
+
+// ===============================================
+//	#display
+// ===============================================
+hide()
+	display none
+	
+.hide 
+	hide()
+	
+.w100
+	width 100%
+	
+dt(auto = false)
+	display table
+	width 100%
+	if auto
+		table-layout auto
+	else
+		table-layout fixed
+	
+dtc(valign = false)
+	display table-cell 
+	if valign
+		vertical-align middle
+	else
+		vertical-align top
+
+.inline
+	display inline
+
+
+
+// ===============================================
+//	#position
+// ===============================================
+.fl-left
+	float left
+	
+.fl-right
+	float right
+
+.center
+	text-align center
+
+.align-right
+	text-align right
+
+.align-left
+	text-align left
+
+.middle
+	vertical-align middle
+
+align(align)
+	if (align == center)
+		justify-content center
+		text-align center
+	else if (align == left)
+		justify-content flex-start
+		text-align left
+	else if (align == right)
+		justify-content flex-end
+		text-align right
+	else if (align == top)
+		align-items flex-start
+		> *
+			vertical-align top
+	else if (align == middle)
+		align-items center
+		> *
+			vertical-align middle
+	else if (align == bottom)
+		align-items flex-end
+	> *
+			vertical-align bottom
+
+
+
+// ===============================================
+//	#padding #margin
+// ===============================================
+mrgno()
+	margin 0
+
+pdnno()
+	padding 0
+
+.margin-no
+	margin 0
+
+
+
+// ===============================================
+//	#decoration
+// ===============================================
+point()
+	cursor pointer
+
+cover()
+	background-size cover
+
+tdn()
+	text-decoration none
+
+tdu()
+	text-decoration underline
+
+
+
+// ===============================================
+//	#animation
+// ===============================================
+anim(time = false)
+	if time
+		transition time ease-out
+	else
+		transition 0.3s ease-out
+anim-all()
+	transition all 0.3s ease-out
+anim-bg()
+	transition background-image 0.3s ease-out
+anim-color()
+	transition color 0.3s ease-out
+anim-op()
+	transition opacity 0.3s ease-out
+anim-none()
+	transition none
+
+
+
+// ===============================================
+//	#list
+// ===============================================
+lino()
+	margin 0 
+	list-style none

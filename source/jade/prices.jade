@@ -1,0 +1,78 @@
+extends _layout
+
+block append content
+	header.header.headerprices
+		.wrap
+			+header-nav
+			.headtext.has-padding
+				h2.headtext__name Why do we charge what we charge?
+				p Great essays begin with great academics. Unfortunately, not everyone who claims to be a great academic is one. This means that we have to go through a strict hiring process with stringent checks in place. Every writer has to have a solid academic record at one of the top British universities.  Once this is proven, we conduct further checks to ensure that every writer is really committed to excellence in their subject. What you have at the end is the “crème de la crème” of professional writing and these cost big money. 
+				p Every order always gets a second pair of eyes to check it. We conduct a comprehensive quality review to ensure that the work is top notch before delivering it to the client.  
+				p All orders come with a free 7 days alterations period, which means that our care team are on hand on speak to you about anything to do with your order and to arrange for alterations.
+				p Still not convinced? Send us your materials and we will write you a free introduction, yours to keep, free of charge. We are confident in our service and certain that you will want to place an order with us.
+	//- header
+
+	.textbox
+		.wrap
+			h3.textbox__name Why Should You Order from Us?
+			.textbox__content
+				p You probably hate essays but our academics love them. <br> They love research. They love analysis. They love writing. <br>They love it because they have been interested in studying their subjects all their lives and have developed a strong devotion to what they do. Let us get your work done with a passion.
+				p An academic work is like a cooked meal. How's that? <br>Well, the meal is only tasty when it has all the ingredients in it.<br>Your essay must include respected academic sources, deep analysis, critical arguments, tables and charts, proper formatting, referencing and many other things. And if it lacks at least a tiny bit of something, then your results are lower than expected. <br>Trusted Academics is like a Michelin star restaurant where every dish is delicious, quickly cooked, and right from the baking oven.
+				p We are strong believers in our results-oriented approach. We focus exclusively on achieving high grades for our dear clients. If the work is well-written but gets a low grade, then what is the point of it? <br>Results is what we are all about. And we have a track record that speaks for itself. Just ask any of our customers.
+				p
+					strong.has-padding Passion. 
+					strong.has-padding Details. 
+					strong.has-padding Results. 
+				p It’s also worth noting, that we are obsessed.<br>Obsessed with exceptional level of quality. Obsessed with every single detail in the work. Obsessed with maintaining the highest level of customer care day and night.
+	//- textbox
+
+	.order.has-padding
+		.order__steps
+			.order__steps-in.is-step-1
+				.step.is-acrive
+					.pos Step 1
+					.name Price Calculation
+				.step
+					.pos Step 2
+					.name Order Details
+				.step
+					.pos Step 3
+					.name Make Payment
+		.order__content
+			.wrap
+				.order__content-in
+					.orderline
+						.orderline__name Work type
+						.orderline__content
+							select.full
+								option(value="", disable) Please select
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+					.orderline
+						.orderline__name Subject
+						.orderline__content
+							select.full
+								option(value="", disable) Please select
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+					.orderline
+						.orderline__name Grade Required
+						.orderline__content
+							select.full
+								option(value="", disable) Please select
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+					.orderline
+						.orderline__name Word count
+						.orderline__content
+							input(type="text", placeholder="Word count").full
+				.order__price
+					.order__price-in
+						.order__price__name Your price
+						.order__price__value £600
+					.order__price-bg
+					.order__price__act
+						a(href="#").btn-gold.btn-grey.w100.js-toogle-class Next step

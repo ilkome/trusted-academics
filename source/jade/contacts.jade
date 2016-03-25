@@ -1,0 +1,43 @@
+extends _layout
+
+block append content
+	header.header.headerinside
+		.wrap
+			+header-nav
+	//- header
+	
+	.contactsbox
+		#gmap
+		.wrap
+			.contactsbox__content
+				.contactsbox__item
+					h3 contact
+					ul
+						li 
+							span t: 
+							| +4 4186 5598060
+						li 
+							span m: 
+							| +4 475 85297181
+						li 
+							span e: 
+							a(href="#") careteam@trustedacademics.co.uk
+				
+				.contactsbox__item
+					h3 address
+					p 52 Cornmarket St, <br>Oxford OX1 3HJ
+				
+				.contactsbox__item
+					h3 FOLLOW us
+					.row
+						.box: a(href="#") Facebook
+						.box: a(href="#") Twitter
+					.row
+						.box: a(href="#") Instagram
+						.box: a(href="#") LinkedIn
+
+
+				.contactsbox__item
+					h3 JOIN OUR TEAM
+					p Email your CV <br>
+						a(href="#") hello@trustedacademics.co.uk

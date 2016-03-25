@@ -1,0 +1,142 @@
+extends _layout
+
+block append content
+	header.header.headerinside
+		.wrap
+			+header-nav
+	//- header
+
+	.order
+		.order__steps
+			.order__steps-in.is-step-1
+				.step.is-acrive
+					.pos Step 1
+					.name Price Calculation
+				.step
+					a(href="order-2.html")
+						.pos Step 2
+						.name Order Details
+				.step
+					a(href="order-2.html")
+						.pos Step 3
+						.name Make Payment
+		.order__content
+			.wrap
+				.order__content-in
+					.orderline
+						.orderline__name Work type
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Subject
+						.orderline__content
+							input(type="text", placeholder="Please type").full
+					.orderline
+						.orderline__name Level of Study
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Grade Required
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					.orderline
+						.orderline__name Word count
+						.orderline__content
+							select.full(data-placeholder="Please select")
+								option
+								option(value="") Option one
+								option(value="") Option two
+								option(value="") Option three
+								option(value="") Option 4
+					
+					.orderline.has-padding
+						.orderline__name Delivery time
+						.orderline__content
+							.orderdates
+								.orderdates__item.has-nostyle
+									.weekday Mon
+								.orderdates__item.has-nostyle
+									.weekday Tue
+								.orderdates__item.has-nostyle
+									.weekday Mon
+								.orderdates__item.has-nostyle
+									.weekday Tue
+								.orderdates__item.has-nostyle
+									.weekday Mon
+								.orderdates__item.has-nostyle
+									.weekday Tue
+								.orderdates__item.has-nostyle
+									.weekday Sun
+							.orderdates
+								mixin orderdates__item
+									a(href="#").orderdates__item
+										.month Feb
+										.day 1
+										.price £710
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+								+orderdates__item
+					
+					.orderdelivey Delivery after 18 March <br> (We will contact you to arrange an exact delivery date) <br>
+						span £400
+
+					h3.orederblock__name About You
+					.orderline
+						.orderline__name Name
+						.orderline__content
+							input(type="text", placeholder="Enter your name").full
+					.orderline
+						.orderline__name Email
+						.orderline__content
+							input(type="text", placeholder="Enter your Email").full
+					.orderline
+						.orderline__name Phone number
+						.orderline__content
+							input(type="text", placeholder="Enter your phone number").full
+
+				.order__price
+					.js-orderprice-fixed
+						.order__price-bg-line
+						.order__price-in
+							.order__price__name Your price
+							.order__price__value £600
+						.order__price-bg
+						.order__price__act
+							a(href="order-2.html").btn-gold.w100 Next step

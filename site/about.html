@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Trusted Academics</title>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Styles-->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
+    <script src="js/jquery.remodal.min.js" type="text/javascript"></script>
+    <script src="js/jquery.sticky-kit.min.js" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+    <script src="js/jquery.formstyler.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+  </head>
+  <body class="page-body">
+    <div class="ilkome">
+      <div class="hide">
+        <div data-remodal-id="review-write" class="popup remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <h2 class="popup__name">Post review</h2>
+          <form action="#review-ok">
+            <div>
+              <input type="text" placeholder="Name" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="E-mail" class="text-inp"/>
+            </div>
+            <div>
+              <textarea placeholder="Message" class="text-area"></textarea>
+            </div>
+            <div class="popup__act">
+              <input type="submit" value="Send review" class="btn-submit"/>
+            </div>
+          </form>
+        </div>
+        <div data-remodal-id="review-ok" class="popupsm remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <p>Thank you! Your review will be posted within 24 hours.</p><a href="#" class="btn-ok">Ok</a>
+        </div>
+        <div data-remodal-id="free-consul" class="popup remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <h2 class="popup__name"> <span class="bg-freecon">Get free consultation</span></h2>
+          <form action="#free-consul-ok">
+            <div>
+              <input type="text" placeholder="Name" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="Number" class="text-inp"/>
+            </div>
+            <div>
+              <input type="text" placeholder="E-mail" class="text-inp"/>
+            </div>
+            <div class="popup__act">
+              <input type="submit" value="Send" class="btn-submit"/>
+            </div>
+          </form>
+        </div>
+        <div data-remodal-id="free-consul-ok" class="popupsm remodal"><a href="#" data-remodal-action="close" class="remodal-close"></a>
+          <p>Our academic consultant will contact you directly. Thank you!</p><a href="#" class="btn-ok">Ok</a>
+        </div>
+      </div>
+      <header class="header headerabout">
+        <div class="wrap">
+          <nav class="headmenu js-headmenu">
+            <div class="wrap">
+              <div class="headlogo"><a href="index.html"></a></div>
+              <ul class="menu-left">
+                <li class="about"><a href="about.html">About us</a></li>
+                <li class="servies is-active"><a href="services.html">Services</a></li>
+                <li><a href="guarantees.html">Guarantees</a></li>
+              </ul>
+              <ul class="menu-right">
+                <li><a href="prices.html">Prices</a></li>
+                <li class="contact"><a href="contacts.html">Contact us</a></li>
+                <li class="is-mark"><a href="order-1.html">Order now</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="headtext">
+            <p>We write essays and we are seriously good at it. We are an academic consulting company helping our clients get the top grades. Our head office is in Oxford and our academics come primarily from Russell Group universities across the UK.</p>
+            <p>Having written over 290,000 words for our clients in the last year alone, we are have the knowledge and experience you can trust. And crucially, we know how to deliver results that suit the requirements and your lecturer.</p>
+            <p>All of us here at Trusted Academics love to meet our clients. Pop into our Oxford office to have lunch, a game of Ping-pong or a non-alcoholic drink.</p>
+            <p>Alternatively, we are always available and super quick to reply. <br>Reach out to us via telephone, Facebook, e-mail, or an owl mailing service. <br></p></p>
+          </div>
+        </div>
+      </header>
+      <div class="team">
+        <div class="wrap">
+          <h2 class="team__name">Meet our team</h2>
+          <div class="team__content">
+                      <div class="team-item">
+                        <div class="team-item-in">
+                          <h3 class="team-item__name">Jeremy O’Donnell</h3>
+                          <div class="team-item__desc">Customer Service Manager</div>
+                          <div class="team-item__pic"><img src="img/user-ava-1.png" alt="Team member photo"></div>
+                          <div class="team-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.</div>
+                        </div>
+                        <div class="team-item__bd"></div>
+                      </div>
+                      <div class="team-item">
+                        <div class="team-item-in">
+                          <h3 class="team-item__name">Cyril Kachmazov</h3>
+                          <div class="team-item__desc">CEO</div>
+                          <div class="team-item__pic"><img src="img/user-ava-2.png" alt="Team member photo"></div>
+                          <div class="team-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.</div>
+                        </div>
+                        <div class="team-item__bd"></div>
+                      </div>
+                      <div class="team-item">
+                        <div class="team-item-in">
+                          <h3 class="team-item__name">Giuseppe Ni</h3>
+                          <div class="team-item__desc">Customer Service Manager</div>
+                          <div class="team-item__pic"><img src="img/user-ava-3.png" alt="Team member photo"></div>
+                          <div class="team-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.</div>
+                        </div>
+                        <div class="team-item__bd"></div>
+                      </div>
+                      <div class="team-item">
+                        <div class="team-item-in">
+                          <h3 class="team-item__name">Giuseppe Ni</h3>
+                          <div class="team-item__desc">SMO</div>
+                          <div class="team-item__pic"><img src="img/user-ava-4.png" alt="Team member photo"></div>
+                          <div class="team-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis pellentesque libero. Suspendisse placerat varius semper. Suspendisse at erat quis magna congue interdum. Quisque elementum, velit in scelerisque pulvinar, nisi lorem pharetra eros, ac ornare velit enim id nulla. Sed et nisi aliquam justo ullamcorper blandit.</div>
+                        </div>
+                        <div class="team-item__bd"></div>
+                      </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="oneprogect is-grey">
+        <div class="oneprogect-in">
+          <div class="oneprogect__date">
+            <div class="is-mark">11 Feb</div>22<span class="sep">:</span>03<span class="sep">:</span>43
+          </div>
+          <h3 class="oneprogect__name">We deal with your deadlines</h3>
+          <div class="oneprogect__text">Your academic excellence is everything to us</div>
+          <div class="oneprogect__act"><a href="#" class="btn-black">order now</a></div>
+        </div>
+        <div class="oneprogect-bg"></div>
+      </div>
+      <footer class="footer">
+        <div class="wrap">
+          <div class="footer__contacts">
+            <div class="phone">+44 1865 59 80 60</div>
+            <div class="email"><a href="#">careteam@trustedacademics.co.uk</a></div>
+          </div>
+          <div class="footer__social">
+            <ul>
+              <li class="fb"><a href="#"></a></li>
+              <li class="inst"><a href="#"></a></li>
+              <li class="tw"><a href="#"></a></li>
+              <li class="in"><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="footer__copy">2015. Trusted Academics. All rights reserved.</div>
+          <div class="footer__logo"><a href="#"></a></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

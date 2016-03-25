@@ -1,0 +1,47 @@
+extends _layout
+
+block append content
+	header.header.headerguarantees
+		.wrap
+			+header-nav
+			.guarantees.guarantees_big
+				mixin guarantee(classname, name, text)
+					.guarantee(class=classname)
+						.guarantee__name= name
+						.guarantee__text= text
+				.guarantees__content
+					+guarantee("gui", "Accordance with Guidelines", "Your personal writer will handle any requested changes to your essay: quickly, for free, and no matter the scale. Assignment will be polished up until you are totally satisfied with the work.")
+					+guarantee("time", "Always on time", "No matter if your work is due in 2 months or just 5 hours - it is guaranteed to be in your inbox well before the deadline. You can remain relaxed & while receiving regular updates on your order.")
+					+guarantee("imp", "Unlimited Improvements", "We are fanatical about quality and this is why our clients keep coming back. We conduct scrupulous in-house checks to ensure that your order is strictly to the guidelines and lecturer’s preferences.")
+					+guarantee("mon", "Money back", "We do not accept every order but when we do, we ensure that you are satisfied with the end product. If, despite our best efforts, you are still not happy, we give you your money back. End of story. ")
+					+guarantee("con", "Full Confidentiality ", "Trusted Academics respects privacy of all our clients: old and new alike. We comply with the Data Protection Act 1998 and are an officially registered data controller - our register number is ZA098961.")
+					+guarantee("plag", "No Plagiarism", "Every order is researched and written from scratch. We never had any plagiarism complaints in the past, however shall this unlikely event occur we would fully compensate you and complete 3 orders for free.")
+			//- guarantees
+	//- header
+	
+	.reviews
+		.wrap
+			h3.reviews__name
+				| reviews 
+				sup (216)
+			.reviews__content
+				mixin review
+					.review
+						.review__date 29 hours ago
+						.review__text Ordered essay first time, to my surprise, very friendly customer service for essay writing company. I got 74, paid a bit expensive for my budget, but the quality is dope.. thanks ! 
+						.review__username Aleksandr
+					.review
+						.review__date 30 hours ago
+						.review__text You guys really helped me to get the work done in the last 10 hours. I’m really grateful to you for that. My previous company refused to write because there was so little time, so I thought I’m going to fail. Thank you for saving me. And the work looks amazing, very smart language and straight to the point. Worth all the money paid!!
+						.review__username Mohamed
+
+				.reviews__content-in
+					+review
+					+review
+					.reviews__act
+						a(href="#").btn-trans.btn200 Show More (216)
+						a(href="#review-write").btn-black.btn200 Post review
+	//- reviews
+
+
+	+oneproject

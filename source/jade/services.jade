@@ -1,0 +1,25 @@
+extends _layout
+
+block append content
+	header.header.headerinside
+		.wrap
+			+header-nav
+	//- header
+	
+
+	.services.services_big
+		.wrap
+			mixin service(classname, name, text)
+				.service(class=classname)
+					.service-in
+						h3.service__name= name
+						.service__text= text
+					.service__bd
+			.services__content
+				+service("ess", "Essays", "A top essay requires a lot of ingredients: essay is marked based on depth of analysis, strength of argument, and degree of focus which means that it is very easy to drop marks along the way. Our writers have, as a basic requirement, an outstanding academic record from one of Britain’s top universities, many - have years of professional writing behind them. Every essay requires significant academic research and is written entirely from scratch. We will never sell you an essay that we sold to somebody else before.")
+				+service("dis", "Dissertations", "A dissertation, on average, makes up between 10% and 25% of total and is an easy way to boost the final grade. As the student has plenty of time to write it, the examiners, naturally, have higher expectations from a dissertation. Work needs to show evidence of use of advanced academic sources, arguments must be developed further, and independent analysis needs to be strengthened Strong dissertations are important to our clients, which is why we give an extended free alterations period of 10 days as standard.")
+				+service("phd", "Ph.D Materials", "An outstanding Ph.D is a big step up from undergraduate or even Master’s work. This is why we have a small team of academics who cater exclusively for Ph.D clients. Ph.D service normally takes several months to complete and we are with you every step of the way: from the first proposal all the way to submission. All our team members have Ph.Ds from UK’s leading universities and some pursuing postdoctoral research. This means that your model Ph.D will be written by people who have gone through the entire process.")
+				+service("law", "Law Essays", "English law has been allowed to uniquely evolve and develop its own set of customs. This means that the style of legal writing is very different to normal essay writing and requires knowledge of specific structuring, analysis, and referencing. Trusted Academics has a jurisprudence team that works solely on law essays. These experts have impressive academic credentials in jurisprudence - many are practicing lawyers. Whether it is corporate, family, or civil law we have the top experts in all of these fields.")
+	//- services
+
+	+oneproject("is-grey")

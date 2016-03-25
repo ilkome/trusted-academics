@@ -1,0 +1,76 @@
+extends _layout
+
+block append content
+	header.header.headerhome
+		.wrap
+			+header-nav
+			.headlegend
+				.headlegend__name Helping students<br>get top grades<br>since 1763
+				.headlegend__text We write essays and we are seriously good at it. <br>Our certified writers from leading British <br>Universities will take care of your deadlines.
+				.headlegend__act
+					a(href="#free-consul").btn-phone Get Free Consultation
+					a(href="#").btn-gold Order-now
+	//- header
+	
+
+	.services
+		.wrap
+			h2.services__name Services
+			mixin service(classname, name, text)
+				.service(class=classname)
+					.service-in
+						h3.service__name= name
+						.service__text= text
+					.service__bd
+			.services__content
+				+service("ess", "Essays", "Getting top grade on an essay is no easy task. Every essay is written by a specialist in the subject who has a strong academic record at a leading British university.")
+				+service("dis", "Dissertations", "Dissertation is the last push towards a great diploma. We cooperate with you to ensure that the work includes all, even the tiniest improvements.")
+				+service("phd", "Ph.D Materials", "Trusted Academics has a team that specifically helps Ph.D candidates. Assistance is provided every step of the way - from initial proposal to final corrections ")
+				+service("law", "Law Essays", "Law students are subject to higher expectations. Trusted Academics has a number of experts in English jurisprudence, who know how to produce first class work.")
+	//- services
+
+
+	.guarantees
+		.wrap
+			h2.guarantees__name Our guarantees to you
+			.guarantees__text At Trusted Academics we do not promise you a moon on a stick, nor do we claim knowledge of every subject. <br>We only take orders in subjects we know best, and when we do – results are just great.
+
+			mixin guarantee(classname, name, text)
+				.guarantee(class=classname)
+					.guarantee__name= name
+					.guarantee__text= text
+			.guarantees__content
+				+guarantee("gui", "Accordance with Guidelines", "Your personal writer will handle any requested changes to your essay: quickly, for free, and no matter the scale. Assignment will be polished up until you are totally satisfied with the work.")
+				+guarantee("time", "Always on time", "No matter if your work is due in 2 months or just 5 hours - it is guaranteed to be in your inbox well before the deadline. You can remain relaxed while receiving regular updates on your order.")
+				+guarantee("imp", "Unlimited Improvements", "We are fanatical about quality and this is why our clients keep coming back. We conduct scrupulous in-house checks to ensure that your order is strictly to the guidelines and lecturer’s preferences.")
+	//- guarantees
+
+
+	.reviews
+		.wrap
+			h3.reviews__name
+				| reviews 
+				sup (216)
+			.reviews__scroller
+				mixin review
+					.review
+						.review__date 29 hours ago
+						.review__text Ordered essay first time, to my surprise, very friendly customer service for essay writing company. I got 74, paid a bit expensive for my budget, but the quality is dope.. thanks ! 
+						.review__username Aleksandr
+					.review
+						.review__date 30 hours ago
+						.review__text You guys really helped me to get the work done in the last 10 hours. I’m really grateful to you for that. My previous company refused to write because there was so little time, so I thought I’m going to fail. Thank you for saving me. And the work looks amazing, very smart language and straight to the point. Worth all the money paid!!
+						.review__username Mohamed
+
+				.js-scrollerbox
+					+review
+					+review
+					+review
+					+review
+					.reviews__act
+						a(href="#").btn-trans.btn200 Show More (216)
+						a(href="#review-write").btn-black.btn200 Post review
+	//- reviews
+
+
+	+oneproject
